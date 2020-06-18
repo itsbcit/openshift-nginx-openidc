@@ -14,3 +14,5 @@ RUN opm install \
 COPY openid-callback.conf /usr/local/openresty/nginx/conf
 COPY openid-auth.conf     /usr/local/openresty/nginx/conf
 COPY default.conf         /usr/local/openresty/nginx/conf.d
+
+COPY 50-copy-config.sh /docker-entrypoint.d/

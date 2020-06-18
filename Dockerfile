@@ -6,8 +6,7 @@ ENV KEYCLOAK_CLIENT_ID     "nginx"
 ENV KEYCLOAK_CLIENT_SECRET "00000000-0000-0000-0000-000000000000"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
-LABEL build_id="1591726561"
-
+LABEL build_id="1592520650"
 
 RUN opm install \
         bungle/lua-resty-session \
@@ -16,3 +15,5 @@ RUN opm install \
 COPY openid-callback.conf /usr/local/openresty/nginx/conf
 COPY openid-auth.conf     /usr/local/openresty/nginx/conf
 COPY default.conf         /usr/local/openresty/nginx/conf.d
+
+COPY 50-copy-config.sh /docker-entrypoint.d/
