@@ -1,12 +1,12 @@
 FROM bcit/openshift-openresty:latest
 
-ENV KEYCLOAK_ENDPOINT      "https://keycloak.example.com"
+ENV KEYCLOAK_ENDPOINT      "https://keycloak.example.com/auth"
 ENV KEYCLOAK_REALM         "master"
 ENV KEYCLOAK_CLIENT_ID     "nginx"
 ENV KEYCLOAK_CLIENT_SECRET "00000000-0000-0000-0000-000000000000"
 
 LABEL maintainer="jesse@weisner.ca, chriswood.ca@gmail.com"
-LABEL build_id="1600379444"
+LABEL build_id="1600449864"
 
 RUN opm install \
         bungle/lua-resty-session \
