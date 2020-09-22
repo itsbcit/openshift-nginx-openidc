@@ -1,2 +1,3 @@
-# docker-template
-Template for new BCIT Docker image repositories
+# openshift-nginx-openidc
+
+Nginx container with lua-resty-openidc
